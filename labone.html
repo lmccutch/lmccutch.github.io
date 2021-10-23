@@ -1,70 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Luke's Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 800px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: grey;
+      color: blaCK;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 800px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
 </head>
-<link href="lab.css" rel="stylesheet" type="text/css"/>
-<div class="stuff">
-  <div class="top">
-  <h1>Luke McCutcheon</h1>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Luke McCutcheon</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://ca.linkedin.com/in/luke-m-8b6119127?trk=people-guest_people_search-card"><span class="glyphicon glyphicon-log-in"></span> Connect on LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="https://www.cifinancial.com/ci-gam/ca/en/index.html">CI Global Asset Management</a></p>
+      <img src="https://s.yimg.com/uu/api/res/1.2/tVDjGbNskNjeUz0nRCEbVA--~B/aD0xMzA7dz00ODA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/business-wire.com/c106c438c3de4afbd3681b0ce1928320" alt="W3Schools.com" style="width:200px;height:48px;">
+      <p><a href="https://www.ryerson.ca/programs/undergraduate/computer-science/">Ryerson Computer Science</a></p>
+      <img src="https://ryersonimagecentre.ca/media/resized/small/ryerson_u_WKGvqyo.png">
+      <p><a href="http://cci.scdsb.on.ca/">Collingwood Collegiate Institute</a></p>
+      <img src="https://lh3.googleusercontent.com/proxy/jtoyAnD9bi1wFYsXzefsy_x8aZG-GEwrhViyt0J2Nq-H7r63dF5axdTA79K4CV4sQP699x6q5QPTGho_Xi6saEju1J9ed3mDKgS_AA">
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome To My Resume!</h1>
+      <p>I am a proactive team player with experience in coordinating multiple priorities and facilitating
+        team collaboration in fast-paced and demanding environments. I have a strong work ethic and
+        am able to balance competing demands and meet deadlines as required from management and
+        work loads. I am skilled in meeting both company objectives and understanding what clients are
+        
+        requesting and able to provide working solutions to these issues.</p>
+      <hr>
+      <div id="interest">
+        <p>Interests</p>
+        <ul>
+          <li>Capital Markets</li>
+          <li>Computer Science</li>
+          <li>Science</li>
+          <li>Technology</li>
+          <li>Sports</li>
+        </ul>
+      </div>
+      <div id="education">
+        <p>Education</p>
+        <ul>
+          <li>Ryerson University - Part Time Computer Science</li>
+          <li>Collingwood Collegiate Institute</li>
+        </ul>
+      </div>
+      <div id="experience">
+        <p>Experience</p>
+        <ul>
+          <li>Sales Associate - CI Global Asset Management</li>
+        </ul>
+      </div>
+      <div id="extra">
+        <p>Extracurriculars</p>
+        <ul>
+          <li>Tennis</li>
+          <li>Golf</li>
+          <li>Working Out</li>
+      </div>
+    <script> 
+      $(document).ready(function(){
+        $("button").click(function(){
+          $("div").animate({left: '250px'});
+        });
+      });
+    </script> 
+    <body>
+      <p>Click the button below to see if Luke is profficient in python (green box will move to the right if he is)</p>
+      <button>Python</button>
+      <div style="background:#98bf21;height:50px;width:50px;position:absolute;"></div>
+    </body>
   </div>
 </div>
-<div id="col">
-  <table>
-    <tr>
-      <th rowspan="2">Contact</th>
-      <td>Work: 416-681-7352</td>
-    </tr>
-    <tr>
-      <td>Cell: 705-994-4086</td>
-    </tr>
-  </table>
-  <hr />
-  <br>
-</div>
-<div id="interest">
-  <p>Interests</p>
-  <ul>
-    <li>Capital Markets</li>
+<footer class="container-fluid text-center">
+  <p>Phone: 705-994-4086 Email: lmccutcheon@ryerson.ca</p>
+</footer>
 
-    <li>Computer Science</li>
-    <li>Science</li>
-    <li>Technology</li>
-    <li>Sports</li>
-  </ul>
-</div>
-<div id="Skills">
-  <p>Programming Languages</p>
-  <ul>
-    <li>Python</li>
-    <li>Java</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>Unix, C & C++</li>
-  </ul>
-</div>
-<div id="education">
-  <p>Education</p>
-  <ul>
-    <li><a href="https://www.ryerson.ca/cs/future-undergraduate-students/part-time/">Ryerson University - Part Time Computer Science</a></li>
-    <li><a href="http://cci.scdsb.on.ca/">Collingwood Collegiate Institute</a></li>
-  </ul>
-</div>
-<div id="experience">
-  <p>Experience</p>
-  <img src="https://s.yimg.com/uu/api/res/1.2/tVDjGbNskNjeUz0nRCEbVA--~B/aD0xMzA7dz00ODA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/business-wire.com/c106c438c3de4afbd3681b0ce1928320" alt="W3Schools.com" style="width:200px;height:48px;">
-  <ul>
-    <li>Sales Associate - CI Global Asset Management</li>
-  </ul>
-</div>
-<div id="extra">
-  <p>Extracurriculars</p>
-  <ul>
-    <li>Tennis</li>
-    <li>Golf</li>
-    <li>Working Out</li>
-</div>
+</body>
+</html>
+}
